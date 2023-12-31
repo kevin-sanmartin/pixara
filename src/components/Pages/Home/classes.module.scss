@@ -1,0 +1,113 @@
+@import "@Themes/constants.scss";
+
+.root {
+	margin: 0 auto;
+	max-width: 1000px;
+	padding: 16px;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+
+	.header-container {
+		text-align: center;
+	}
+
+	.form-container {
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+
+		.input-container {
+			display: flex;
+			border-radius: 8px;
+			background-color: var(--secondary-background-color);
+
+			.input {
+				padding: 16px;
+				flex: 1;
+				border: none;
+				outline: none;
+				background-color: transparent;
+				color: var(--color-neutral-700);
+				font-size: 16px;
+			}
+
+			.points-container {
+				min-width: 60px;
+				padding: 16px;
+				border: 2px solid var(--color-primary-500);
+				border-radius: 8px;
+				text-align: center;
+			}
+		}
+
+		.submit-text {
+			color: var(--color-generic-white);
+		}
+	}
+
+	.success-container {
+		text-align: center;
+	}
+
+	.guesses-container {
+		padding: 16px;
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+		background-color: var(--secondary-background-color);
+		border-radius: 8px;
+
+		.guess-item {
+			opacity: 0;
+			animation: fadeIn 0.5s ease-in-out forwards;
+		}
+
+		.wrong-guess {
+			opacity: 0;
+			animation: errorShake 0.5s ease-in-out forwards;
+		}
+	}
+}
+
+.bold {
+	font-weight: var(--font-weight-bold);
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes errorShake {
+	0% {
+		opacity: 0;
+		transform: translateX(0);
+	}
+
+	20% {
+		transform: translateX(-10px);
+	}
+
+	40% {
+		transform: translateX(10px);
+	}
+
+	60% {
+		transform: translateX(-10px);
+	}
+
+	80% {
+		transform: translateX(10px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}

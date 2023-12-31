@@ -1,0 +1,23 @@
+@import "@Themes/fonts.scss";
+
+$screen-l: 1440px;
+$screen-m: 1023px;
+$screen-s: 767px;
+$screen-xs: 424px;
+
+$color-generic-white: #ffffff;
+$color-generic-black: #000000;
+
+/* WEIGHTS */
+$font-weight-regular: 400;
+$font-weight-medium: 600;
+$font-weight-semibold: 700;
+$font-weight-bold: 800;
+$font-weight-extrabold: 900;
+
+/* FONTS */
+$font-family-primary: "inter";
+$font-family-secondary: "roboto";
+
+/* SHADOWS */
+$box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
